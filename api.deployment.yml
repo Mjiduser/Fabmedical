@@ -22,7 +22,7 @@ spec:
       name: api
     spec:
       containers:
-      - image: fabmedical586563.azurecr.io/content-api
+      - image: fabmedical587663.azurecr.io/content-api
         env:
           - name: MONGODB_CONNECTION
             valueFrom:
@@ -55,4 +55,4 @@ spec:
       restartPolicy: Always
       schedulerName: default-scheduler
       securityContext: {}
-      terminationGracePeriodSeconds: 30    
+      terminationGracePeriodSeconds: 30

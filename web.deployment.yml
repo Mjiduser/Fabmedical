@@ -22,7 +22,7 @@ spec:
       name: web
     spec:
       containers:
-      - image: fabmedical586563.azurecr.io/content-web
+      - image: fabmedical587663.azurecr.io/content-web
         env:
           - name: CONTENT_API_URL
             value: http://api:3001

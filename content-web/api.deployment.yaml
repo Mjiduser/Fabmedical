@@ -2,18 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    deployment.kubernetes.io/revision: "3"
-  creationTimestamp: "2022-04-13T05:30:45Z"
-  generation: 5
+    deployment.kubernetes.io/revision: "2"
+  creationTimestamp: "2022-04-14T14:49:37Z"
+  generation: 4
   labels:
     app: api
   name: api
   namespace: ingress-demo
-  resourceVersion: "21400"
-  uid: d4f1cf6e-5cd9-47de-8623-bbee18ef7c20
+  resourceVersion: "61296"
+  uid: 7dfb98aa-a937-4796-a9cc-d7e6ad0c398a
 spec:
   progressDeadlineSeconds: 600
-  replicas: 2
+  replicas: 4
   revisionHistoryLimit: 10
   selector:
     matchLabels:
@@ -37,7 +37,7 @@ spec:
             secretKeyRef:
               key: db
               name: cosmosdb
-        image: fabmedical586563.azurecr.io/content-api
+        image: fabmedical587663.azurecr.io/content-api
         imagePullPolicy: Always
         livenessProbe:
           failureThreshold: 3
@@ -67,21 +67,21 @@ spec:
       securityContext: {}
       terminationGracePeriodSeconds: 30
 status:
-  availableReplicas: 2
+  availableReplicas: 4
   conditions:
-  - lastTransitionTime: "2022-04-13T05:30:45Z"
-    lastUpdateTime: "2022-04-13T05:48:11Z"
-    message: ReplicaSet "api-544654d6c8" has successfully progressed.
+  - lastTransitionTime: "2022-04-14T14:49:37Z"
+    lastUpdateTime: "2022-04-14T15:18:17Z"
+    message: ReplicaSet "api-757dc766db" has successfully progressed.
     reason: NewReplicaSetAvailable
     status: "True"
     type: Progressing
-  - lastTransitionTime: "2022-04-13T05:51:05Z"
-    lastUpdateTime: "2022-04-13T05:51:05Z"
+  - lastTransitionTime: "2022-04-14T15:22:26Z"
+    lastUpdateTime: "2022-04-14T15:22:26Z"
     message: Deployment has minimum availability.
     reason: MinimumReplicasAvailable
     status: "True"
     type: Available
-  observedGeneration: 5
-  readyReplicas: 2
-  replicas: 2
-  updatedReplicas: 2
+  observedGeneration: 4
+  readyReplicas: 4
+  replicas: 4
+  updatedReplicas: 4
